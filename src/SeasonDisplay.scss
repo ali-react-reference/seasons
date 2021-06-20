@@ -1,0 +1,43 @@
+.icon{
+    position: relative;
+    &.sun{
+        color: darkred;
+    }
+    &.snowflake{
+        color: darkblue;
+    }
+    &.right-icon{
+        animation:spinClockwise 12s linear infinite;
+    }
+    &.left-icon{
+        animation:spinAntiClockwise 12s linear infinite;
+    }
+    &:hover{
+        color: grey;
+    }
+    transition-duration: 400ms;
+}
+
+.season-display{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    justify-items:center;
+    align-items:center;
+    flex-direction: row;
+    height: 100%;
+    &.Summer{
+        background-color: burlywood;
+    }
+    
+    &.Winter{
+        background-color: aqua;
+    }
+}
+
+@keyframes spinClockwise { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes spinAntiClockwise { 100% { -webkit-transform: rotate(-360deg); transform:rotate(- 360deg); } }
